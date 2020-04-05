@@ -76,9 +76,14 @@ if __name__ == "__main__":
         return v.lower() in ("yes", "true", "t", "1")
 
     parser = argparse.ArgumentParser(prog="python ter_converter.py")
-    parser.add_argument("-i", dest="input_file_path", help="input file path", required=True)
-    parser.add_argument("-o", dest="output_file_path", help="output file path", required=True)
-    parser.add_argument(
+    parser._action_groups.pop()
+
+    required = parser.add_argument_group("required arguments")
+    optional = parser.add_argument_group("optional arguments")
+
+    required.add_argument("-i", dest="input_file_path", help="input file path", required=True)
+    required.add_argument("-o", dest="output_file_path", help="output file path", required=True)
+    optional.add_argument(
         "use_base_height",
         help="use base height",
         type=str2bool,
@@ -86,7 +91,7 @@ if __name__ == "__main__":
         const=True,
         nargs="?",
     )
-    parser.add_argument(
+    optional.add_argument(
         "use_height_scale",
         help="use height scale",
         type=str2bool,
@@ -94,7 +99,7 @@ if __name__ == "__main__":
         const=True,
         nargs="?",
     )
-    parser.add_argument(
+    optional.add_argument(
         "convert_log_scale",
         help="convert log scale",
         type=str2bool,

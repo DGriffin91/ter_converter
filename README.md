@@ -18,15 +18,14 @@ usage: python ter_converter.py [-h] -i INPUT_FILE_PATH -o OUTPUT_FILE_PATH
                                [use_base_height] [use_height_scale]
                                [convert_log_scale]
 
-positional arguments:
+required arguments:
+  -i INPUT_FILE_PATH   input file path
+  -o OUTPUT_FILE_PATH  output file path
+
+optional arguments:
   use_base_height      use base height
   use_height_scale     use height scale
   convert_log_scale    convert log scale
-
-optional arguments:
-  -h, --help           show this help message and exit
-  -i INPUT_FILE_PATH   input file path
-  -o OUTPUT_FILE_PATH  output file path
   
 Example: python ter_converter.py -i some_terragen_file.ter -o my_new_heightmap.exr
 ```

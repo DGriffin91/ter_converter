@@ -8,7 +8,7 @@ Link to official .TER format specification](https://planetside.co.uk/wiki/index.
 
 download or clone repository 
 pip3 install -r requirements.txt
-imageio_download_bin freeimage # [gets the .EXR binaries](https://imageio.readthedocs.io/en/stable/format_exr-fi.html) for imageio (used for image export)
+imageio_download_bin freeimage # [gets the .EXR binaries] (https://imageio.readthedocs.io/en/stable/format_exr-fi.html) for imageio (used for image export)
 
 ## Usage:
 ```
